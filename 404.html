@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена | ОгнеПроект</title>
+  
+  <!-- Подключение шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --paper: #0E0E10;
+      --paper-2: #16161A;
+      --paper-3: #1F1F25;
+      --ink: #F2F0EB;
+      --ink-2: #E9E6DE;
+      --ink-soft: #B9B7AF;
+      --signal: #E1261C;
+      --signal-deep: #B81E15;
+      --muted: #9A9890;
+      --muted-2: #6E6C66;
+      --line: #2A2A30;
+      --line-2: #3A3A42;
+      --white: #FFFFFF;
+      
+      --bg-deep: #080809;
+      --bg-deep-soft: #1A1A1F;
+      
+      --font-display: 'Oswald', system-ui, sans-serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+      
+      --radius: 2px;
+      --ease: cubic-bezier(.2, .7, .2, 1);
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: var(--font-body);
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .error-wrapper {
+      text-align: center;
+      max-width: 640px;
+      width: 100%;
+    }
+
+    /* === ЦИФРА 404 === */
+    .error-code {
+      font-family: var(--font-display);
+      font-size: clamp(5rem, 18vw, 10rem);
+      font-weight: 700;
+      color: var(--signal);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+      user-select: none;
+      text-transform: uppercase;
+    }
+
+    /* === ЗАГОЛОВОК === */
+    .error-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 4vw, 1.6rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+
+    /* === ОПИСАНИЕ === */
+    .error-text {
+      color: var(--ink-soft);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    /* === КНОПКА === */
+    .btn-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--signal);
+      color: var(--white);
+      padding: 14px 28px;
+      text-decoration: none;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius);
+      transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    
+    .btn-home:hover {
+      background: var(--signal-deep);
+      transform: translateY(-2px);
+    }
+    
+    .btn-home .arrow {
+      transition: transform 0.2s var(--ease);
+      font-size: 1.1em;
+    }
+    
+    .btn-home:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* === ДЕКОРАТИВНАЯ ЛИНИЯ === */
+    .error-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--line-2);
+      margin: 24px auto;
+    }
+
+    /* === АДАПТИВ === */
+    @media (max-width: 480px) {
+      .btn-home { 
+        width: 100%; 
+        justify-content: center; 
+      }
+      
+      .error-code {
+        font-size: clamp(4rem, 20vw, 8rem);
+      }
+    }
+  </style>
+</head>
+<body>
+<div style="background:#111;color:#fff;font:400 12px/1.4 system-ui,sans-serif;text-align:center;padding:6px 10px">Демонстрационный макет. Компания вымышленная, контакты, цены, адрес и реквизиты условные.</div>
+
+  <div class="error-wrapper">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Страница не найдена</h1>
+    <div class="error-divider"></div>
+    <p class="error-text">К сожалению, запрашиваемая страница не существует, была перемещена или временно недоступна. Вероятно, вы перешли по устаревшей ссылке.</p>
+    <a href="index.html" class="btn-home">Вернуться на главную <span class="arrow">→</span></a>
+  </div>
+
+</body>
+</html>
