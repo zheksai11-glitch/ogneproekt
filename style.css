@@ -488,3 +488,16 @@ h2.section-title{font-size:clamp(2rem,4.6vw,3.4rem)}
   .svc h3{font-size:.95rem}
   .code-strip code{font-size:.65rem;padding:2px 5px}
 }
+
+/* ---- правки демо: длинные заголовки и таблицы на узких экранах ---- */
+h1, h2, h3{overflow-wrap:break-word;word-break:break-word}
+h1.section-title{font-size:clamp(1.5rem,4.6vw,3.4rem);line-height:1.12}
+main table{width:100%;border-collapse:collapse;margin:18px 0 8px}
+main table th,main table td{padding:10px 12px;text-align:left;vertical-align:top;
+  border-bottom:1px solid rgba(0,0,0,.12);font-size:.9rem;line-height:1.5;color:var(--ink-soft)}
+main table th{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink)}
+@media(max-width:640px){
+  main table{table-layout:fixed}
+  main table th,main table td{padding:8px;font-size:.78rem;overflow-wrap:break-word}
+}
